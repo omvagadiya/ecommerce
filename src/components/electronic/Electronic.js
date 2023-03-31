@@ -22,8 +22,8 @@ function Electronic() {
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
                                  <div className="electronic_img"><img src={laptop} alt="el"/></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -31,10 +31,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Mobile</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626 "}}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={mobile} /></div>
+                                 <div className="electronic_img"><img src={mobile} alt="" /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div> 
                                  </div>
                               </div>
                            </div>
@@ -42,10 +42,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Computers</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={computer}/></div>
+                                 <div className="electronic_img"><img src={computer} alt="" /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -62,10 +62,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Laptop</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={laptops} /></div>
+                                 <div className="electronic_img"><img src={laptops} alt=""  /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -73,10 +73,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Mobile</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={mobiles} /></div>
+                                 <div className="electronic_img"><img src={mobiles} alt="" /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -84,10 +84,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Computers</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={Computers} /></div>
+                                 <div className="electronic_img"><img src={Computers} alt=""  /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -104,10 +104,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Laptop</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={laptop} /></div>
+                                 <div className="electronic_img"><img src={laptop} alt=""  /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -115,10 +115,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Mobile</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={mobile} /></div>
+                                 <div className="electronic_img"><img src={mobile} alt=""  /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
@@ -126,10 +126,10 @@ function Electronic() {
                               <div className="box_main">
                                  <h4 className="shirt_text">Computers</h4>
                                  <p className="price_text">Start Price  <span style={{ color: "#262626" }}>$ 100</span></p>
-                                 <div className="electronic_img"><img src={computer} /></div>
+                                 <div className="electronic_img"><img src={computer} alt=""  /></div>
                                  <div className="btn_main">
-                                    <div className="buy_bt"><a href="">Buy Now</a></div>
-                                    <div className="seemore_bt"><a href="">See More</a></div>
+                                    <div className="buy_bt"><a href="#all">Buy Now</a></div>
+                                    <div className="seemore_bt"><a href="#all">See More</a></div>
                                  </div>
                               </div>
                            </div>
