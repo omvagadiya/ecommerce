@@ -1,259 +1,87 @@
+import React, { useState, useEffect } from 'react';
 import Header from "../header/Header";
 import './Product.css';
-import s from '../../assests/images/mobile-img.png';
-import o from '../../assests/images/realme.png.webp';
-function Product() {
-    return ( 
-    <>
-    <Header/>
-   
-<div className="container">
-    <div className="row clearfix">
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootstrapious.com/i/snippets/sn-cards/shoes-1_gthops.jpg" alt="Product" className="img-fluid" />
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-outline-dark btn-sm waves-effect"><i className="zmdi zmdi-plus"><b>Add cart</b></i></a><a></a>
-                            <a href="javascript:void(0);" className="btn btn-outline-dark btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"><b>Buy Now</b></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$13.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src={s} alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$12.00</li>
-                            <li className="new_price">$11.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src={o} alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Brone Candle</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$23.00</li>
-                            <li className="new_price">$17.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Brone Lamp Glasses</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$18.00</li>
-                            <li className="new_price">$15.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Unero Small Bag</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$21.00</li>
-                            <li className="new_price">$17.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Unero Round lass</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Wood Simple Clock</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Wood Long TV</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus"></i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Wood Simple Chair</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-12">
-            <div className="card product_item">
-                <div className="body">
-                    <div className="cp_img">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Product" className="img-fluid"/>
-                        <div className="hover">
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-plus">+</i></a>
-                            <a href="javascript:void(0);" className="btn btn-primary btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div className="product_details">
-                        <h5><a href="ec-product-detail.html">Simple Black</a></h5>
-                        <ul className="product_price list-unstyled">
-                            <li className="old_price">$16.00</li>
-                            <li className="new_price">$10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+import { useAddtoCartMutation } from '../../redux/store';
 
-    </> 
+
+function  Product() {
+    const [AddtoCart] = useAddtoCartMutation();
+    
+    const [product, setProducts] = useState([]);
+    // const [cartItems, setCartItems] = useState([]);
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error(error));
+    }, []);
+
+    // // Add product to cart
+    // function addToCart() {
+    //     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
+    //     if (product) {
+    //       const existingItem = cart.find((item) => item.product.id === product.id);
+      
+    //       if (existingItem) {
+    //         existingItem.quantity += 1;
+    //       } else {
+    //         cart.push({ product, quantity: 1 });
+    //       }
+      
+    //       localStorage.setItem("cart", JSON.stringify(cart));
+    //       setCartItems(cart);
+    //     }
+    //   }
+    const handleCart = async(key)=>{
+        const response = await AddtoCart(key);
+        console.log(response , "Ans");
+    }
+    return (
+
+        <>
+            <Header />
+            
+           
+            <div className="container">
+                <div className="row">
+                    {product.map(product => (
+                        <div className="col-lg-3 col-md-4 col-sm-6" key={product.id}>
+                            <div className="card product_item "style={{ width: "100%", height: "90%" }}>
+                                <div className="body">
+                                    <div className="cp_img" >
+                                        <img src={product.image} alt={product.title} className="img-fluid" style={{ width: "250px", height: "160px" }} />
+                                        
+                                        <div className="hover">
+                                        
+                                        <div style={{float:"left"}}><button className="btn btn-outline-dark btn-sm waves-effect" onClick={()=>handleCart(product)}><b>Add cart</b></button></div>
+                                        <div style={{float:"right"}}> <button className="btn btn-outline-dark btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"><b>Buy Now</b></i></button></div>  
+                                        </div>
+                                        
+                                    </div>
+                                    <div className="product_details">
+
+                                        <ul className="product_price list-unstyled">
+                                            <li className="old_price">${(product.price * 1.2).toFixed(2)}</li>
+                                            <li className="new_price">${product.price.toFixed(2)}</li>
+                                        </ul>
+                                        <ul >
+                                            <li ><p style={{fontFamily:"revert", fontSize:"12px",width: "150px"}}><strong><b> TITLE :</b><br></br></strong>{product.title} </p></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+        </>
     );
 }
 
-export default Product;
+
+export default Product ;
+//  export { Product, Cart };
