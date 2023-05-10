@@ -2,27 +2,49 @@
 import { useState } from "react";
 
 function CheckOut() {
-  const {AddCheckOut} = useAddCheckOutMutation();
+  const [ AddCheckOut ] = useAddCheckOutMutation();
   const [ CheckOut, setCheckOut ] = useState ([])
 
-  const handleChange =(e)=>{
+  const handleChange = (e)=>{
      setCheckOut({...CheckOut , [e.target.name]: e.target.value });
     };
   
     const handleSubmit = async(e)=>{
        e.preventDefault();
-       await AddCheckOut(CheckOut);
-       
+      //  await CheckOut(CheckOut);
+       console.log(CheckOut,"CheckOut");
+       const res = await AddCheckOut(CheckOut);
+       if(res === "ok"){
+        console.log("deleted Sucess");
+       }else{
+        console.log(res.error);
+       }
       };
     return (
     <>
+           
+
                <div className="col-md-7 col-lg-8">
               <div className="card mb-4">
+              
+             
                 <div className="card-header py-3">
-                  <h2 className="mb-0">Billing address</h2>
+                <h2 className="mb-0">Billing address</h2>
+                <div className="payment-info" style={{width:"250px", float:"right"}}>
+                    <div className="d-flex justify-content-between align-items-center"><span>Order Summary</span></div>
+
+                                       <hr className="line" />
+                    <div className="d-flex justify-content-between information"><span>Subtotal</span><span>$3000.00</span></div>
+                    <div className="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span></div>
+                    <div className="d-flex justify-content-between information"><span>Total amount</span><span>$3020.00</span></div>
+            
+                </div>
+              
+
+                 
                 </div>
                 <div className="card-body">
-                  <form className="needs-validation" novalidate onSubmit={handleSubmit}>
+                  <form className="needs-validation"  onSubmit={handleSubmit}>
                     <div className="row g-3">
                       <div className="col-sm-6 my-1">
                         <label for="firstName" className="form-label">
@@ -266,7 +288,9 @@ function CheckOut() {
                 </div>
               </div>
             </div>
-        
+          
+            
+             
            
     </> );
 }

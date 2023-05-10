@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Header from "../header/Header";
 import './Product.css';
 import { useAddtoCartMutation } from '../../redux/store';
+import { Link } from 'react-router-dom';
 
 
 function  Product() {
     const [AddtoCart] = useAddtoCartMutation();
-    
+   
     const [product, setProducts] = useState([]);
-    // const [cartItems, setCartItems] = useState([]);
+    console.log(product,"product")
+
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
@@ -16,23 +18,6 @@ function  Product() {
             .catch(error => console.error(error));
     }, []);
 
-    // // Add product to cart
-    // function addToCart() {
-    //     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      
-    //     if (product) {
-    //       const existingItem = cart.find((item) => item.product.id === product.id);
-      
-    //       if (existingItem) {
-    //         existingItem.quantity += 1;
-    //       } else {
-    //         cart.push({ product, quantity: 1 });
-    //       }
-      
-    //       localStorage.setItem("cart", JSON.stringify(cart));
-    //       setCartItems(cart);
-    //     }
-    //   }
     const handleCart = async(key)=>{
         const response = await AddtoCart(key);
         console.log(response , "Ans");
@@ -55,7 +40,7 @@ function  Product() {
                                         <div className="hover">
                                         
                                         <div style={{float:"left"}}><button className="btn btn-outline-dark btn-sm waves-effect" onClick={()=>handleCart(product)}><b>Add cart</b></button></div>
-                                        <div style={{float:"right"}}> <button className="btn btn-outline-dark btn-sm waves-effect"><i className="zmdi zmdi-shopping-cart"><b>Buy Now</b></i></button></div>  
+                                        <div style={{float:"right"}}><Link to={"/Show/" + product.id}><button className="btn btn-outline-dark btn-sm waves-effect"><b>Buy Now</b></button></Link></div>  
                                         </div>
                                         
                                     </div>
@@ -84,4 +69,3 @@ function  Product() {
 
 
 export default Product ;
-//  export { Product, Cart };

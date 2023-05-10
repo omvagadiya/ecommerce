@@ -1,8 +1,9 @@
 import logo from "./../../assests/images/logo.png";
 import toggleIcon from './../../assests/images/toggle-icon.png';
 import { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import app from "../../App";
+import { useNavigate } from "react-router";
+import { useUserAuth } from "./../../context/UserAuthContext";
+
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -11,26 +12,36 @@ function Header() {
     const [carousel, carouselItem] = useState("carousel-item")
     const [openM, setOpenM] = useState("dropdown-menu")
 
-    const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+    const { logOut } = useUserAuth();
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+      try {
+        await logOut();
+        navigate("/");
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
     const carousels = () => {
-        carouselItem(carousel == "carousel-item" ? "carousel-item active" : "carousel-item");
+        carouselItem(carousel === "carousel-item" ? "carousel-item active" : "carousel-item");
     }
     const openNav = () => {
-        setOpenNav(opennav == "sidenav close" ? "sidenav open" : "sidenav close");
+        setOpenNav(opennav === "sidenav close" ? "sidenav open" : "sidenav close");
     }
     const openDropd = () => {
-        setOpenDropDown(opendropd == "dropdown" ? "dropdown show" : "dropdown");
-        setOpenM(openM == "dropdown-menu" ? "dropdown-menu show" : "dropdown-menu");
+        setOpenDropDown(opendropd === "dropdown" ? "dropdown show" : "dropdown");
+        setOpenM(openM === "dropdown-menu" ? "dropdown-menu show" : "dropdown-menu");
     }
     
    
     return (
         <>
-
-            <div className="banner_bg_main">
-
-                <div className="container">
-                    <div className="header_section_top">
+           
+            {/* <div className="banner_bg_main"> */}
+            
+                {/* <div className="container">
+                   <div className="header_section_top">
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="custom_menu">
@@ -44,8 +55,10 @@ function Header() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> 
+                </div>    */}
+                 
+              
 
                 <div className="logo_section">
                     <div className="container">
@@ -67,6 +80,7 @@ function Header() {
                                 <a href=""><Link to="/Order">Order</Link></a>
                                 <a href=""><Link to="/About">About</Link></a>
                                 <a href=""><Link to="/Contact">Contact</Link></a>
+                                <a href=""><a onClick={handleLogout}>Logout</a></a>
 
                                
                             </div>
@@ -96,22 +110,29 @@ function Header() {
                             <span className="header_box">
 
                                 <div className="login_menu">
+                                
                                     <ul>
                                         <li><a href="#">
                                             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            
                                             <Link to="/Cart"><span className="padding_10">Cart</span></Link></a>
                                         </li>
+                                        
+                                       
+                                        
+                                            <li><a href="#">
+                                            <i className="fa fa-user" aria-hidden="true"></i>
+                                            <Link to="/Login"><span className="padding_10">Log In</span></Link></a>
+                                        </li>
+                                       
+                                           
                                         <li><a href="#">
                                             <i className="fa fa-user" aria-hidden="true"></i>
-                                            <span className="padding_10" onClick={() => loginWithRedirect({ app })}>Log In</span>
-                                        </a>
+                                            <Link to="/Register"><span className="padding_10" >Register</span></Link></a>
                                         </li>
-                                        <li><a href="#">
-                                            <i className="fa fa-user" aria-hidden="true"></i>
-                                            <span className="padding_10" onClick={() => logout({ returnTo: window.location.origin })}>Log Out</span>
-                                        </a>
-                                        </li>
+                                        
                                     </ul>
+                                        
                                 </div>
                             </span>
                         </div>
@@ -156,9 +177,9 @@ function Header() {
                         </div>
                     </div>
                 </div>
-
-            </div>
-
+                {/* </div> */}
+           
+         
         </>
     );
 }

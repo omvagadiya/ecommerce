@@ -83,7 +83,7 @@ const CartApi = createApi({
 export const {
     useAddtoCartMutation ,
     useFatchCartQuery ,
-    useDeleteCartMutation
+    useDeleteCartMutation ,
 } = CartApi;  
 
 export  {CartApi};

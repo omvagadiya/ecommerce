@@ -46,7 +46,7 @@ return (<>
         <div className="row no-gutters">
             <div className="col-md-8">
                 <div className="product-details mr-2">
-                    <div className="d-flex flex-row align-items-center"><i className="fa fa-long-arrow-left"></i><span className="ml-2">Continue Shopping</span></div>
+                    <div className="d-flex flex-row align-items-center"><Link to="/Product"><i className="fa fa-long-arrow-left"></i><span className="ml-2">Continue Shopping</span></Link></div>
                     <hr />
                     <h2 className="mb-0"><center>Shopping cart</center></h2>
                     <div className="d-flex justify-content-between"><span>You have items in your cart</span>
